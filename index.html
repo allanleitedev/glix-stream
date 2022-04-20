@@ -9,34 +9,53 @@
     <title>Home-Glix</title>
 </head>
 <body>
-    <nav class="navbar navbar-expan-lg navbar-light ">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="./img/logo.png" alt="Logotipo Glix, GLIX escrito em fonte sem serifa (branco), a palavra tem um corte diagonal, ao lado direito há simbolos representando botões de um joystick">
-            </a>
-            <button class="navbar-toggler toggler-st text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupport">
-                <span class="navbar-toggler-icon text-light"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Campeonatos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Populares</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main>
+    <nav class="navbar navbar-expand-lg p">
         <div class="container-fluid pd-0">
-            <div class="most-showed">
-                
+          <a class="navbar-brand logo" href="#">
+              <img src="./img/logo.png" alt="Logo da Glix: Texto escrito GLix com simbolo à direita representando botões do joystick, nas cores, amarelo, roxo, vermelho e azul">
+          </a>
+          <div class=" navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Jogos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Streamings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Categorias</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <main>
+        <div class="container-fluid pd-0 cont-most">
+            <div class="fadetop"></div>
+            <div class="most-showed col-sm">
+                <span class="most-showed-icon row"></span>
+                <h2 class="title row">Nome do Streamer</h2>
+                <h3 class="description row">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt eos autem, iusto harum veritatis nulla at suscipit explicabo corporis neque recusandae ipsum voluptate nemo dolores dignissimos, deserunt velit necessitatibus aliquid?</h3>
+                <div class="buttons row">
+                    <button class="play">Play</button>
+                    <button class="mais">Mais</button>
+                </div>
             </div>
+            <div class="col-sm"></div>
         </div>
     </main>
 </body>
