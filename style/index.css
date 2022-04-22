@@ -17,6 +17,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
+	color: inherit;
+	font-family: sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -41,6 +44,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* colors */
 
@@ -57,56 +63,174 @@ table {
 
 body{
     background-color: var(--bg-dark);
-}
-
-nav{
-	height: 60px;
-	z-index: 1000;
-	padding: 0px 10px;
+	width: 100%;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 div,a,img{
 	height: 100%;
-	padding-bottom: 10px;
 }
 
-.pd-0{
-	padding: 0;
-}
-/* MOST SHOWED */
-
-.cont-most{
-	position: relative;
-}
-.most-showed{
-	background-image: url(/img/mostshowed.jpg);
-	height: 50vh;
-	width: 100vw;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
 .fadetop{
-	height:60px;width:100%;position:absolute;left:0; top:0;
+	height:200px;width:100%;position:absolute;left:0; top:0;
 	background: linear-gradient(to bottom,  rgb(1, 17, 38) 0%,rgba(255,255,255,0) 100%);
 }
 
+.fadebottom{
+	height:200px;width:100%;position:absolute;left:0; bottom:0;
+	background: linear-gradient(to top,  rgb(1, 17, 38) 0%,rgba(255,255,255,0) 100%);
+}
+
+
 /*MENU*/
-
-.menu a{
-	font-family: sans-serif;
-	color: var(--white);
-	opacity: 92%;
+nav{
+	position: absolute;
+	width: 99%;
+	height: 30px;
+	padding: 10px 0px;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #f5f5f5;
 }
 
-.menu a:hover{
 
-	color: var(--purple);
+nav > ul{
+	display: flex;
 }
 
-@media (max-width:990px) {
+#input-search{
+	border: 1px solid #6260a6;
+	background-color: #f5f5f5;
+	opacity: 0.9;
+	border-radius: 10px;
+	padding: 0px 10px;
+}
+
+.search{
+	display: flex;
+}
+.material-icons{
+	margin-right: 10px;
+}
+.brand{
+	margin-left: 10px;
+	filter: drop-shadow(0px 0px 30px #f5f5f5);
+}
+
+.navigation li {
+	margin: 0px 20px;
 	
-	.fadetop{
-		height: 30vh;
-	}
-	
+}
+
+.config{
+	position: relative;
+}
+.config img{
+
+	border-radius: 20%;
+	max-height: 30px;
+	margin-right: 10px;
+}
+
+.config li{
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+
+.config:hover .account{
+	opacity: 1;
+	visibility: visible;
+}
+.account{
+	visibility: collapse;
+	transition: 0.5s;
+	background-color: rgba(245, 245, 245,0.8);
+	border: 1px solid rgba(98, 96, 166,0.8);
+	position: absolute;
+	left: 10px;
+	top: 40px;
+	opacity: 0;
+	border-radius: 10px;
+	color: #6260a6;
+	box-shadow:0px 0px 120px #011C40;
+}
+
+.users{
+	border-bottom: 1px solid #6260a6;
+}
+
+/*MAIS VISTO*/
+
+.most-watched{
+	z-index: 1;
+	position: relative;
+	background-image: url(/img/mostwatched.jpg);
+
+	height: 100vh;
+}
+
+.most-container{
+	padding-left: 50px;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.most-showed-icon{
+	filter: drop-shadow(0px 0px 5px #011c40);
+	color: #F2DC6B;
+	margin: 50px 0px;
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.stname{
+	font-size: 4rem;
+	color: #f5f5f5;
+	filter: drop-shadow(0px 0px 10px #011c40);
+}
+
+.play{
+	border: 1px solid #6260a6;
+	margin-top: 50px;
+	color: #011C40;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	min-width: 150px;
+	min-height: 50px;
+	margin-right: 60px;
+	font-size: 1.5rem;
+	box-shadow: 0px 0px 30px #f5f5f5;
+}
+
+.profile {
+	border: 1px solid #6260a6;
+	margin-top: 50px;
+	color: #f5f5f5;
+	background-color: rgba(1, 28, 64, 0.85);
+	border-radius: 10px;
+	min-width: 150px;
+	min-height: 50px;
+	margin-right: 60px;
+	font-size: 1.5rem;
+	box-shadow: 0px 0px 30px #011C40;
+}
+
+/* listas */
+
+.listas{
+	position: absolute;
+	transform: translateY(-100px);
+	padding-left: 50px;
+	font-weight: 700;
+	color: #f5f5f5;
+	width: 100%;
+	z-index: 9999;
+	filter: drop-shadow(0px 0px 5px #011c40);
 }
