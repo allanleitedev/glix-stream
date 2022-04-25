@@ -237,3 +237,22 @@ nav > ul{
 
 	/* live */
 
+.live-streamers{
+	display: flex;
+	width: 95vw;
+}
+
+.live-streamers li {
+	margin: 50px;
+	height: 200px;
+}
+
+.live-streamers img{
+	margin-bottom: 20px;
+}
+
+.live-streamers p {
+	background: rgba(1, 28, 64,0.6);
+	transform: translateY(-80px);
+	padding: 21px;
+}
