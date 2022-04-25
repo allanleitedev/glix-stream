@@ -167,8 +167,8 @@ nav > ul{
 .most-watched{
 	z-index: 1;
 	position: relative;
-	background-image: url(/img/mostwatched.jpg);
-
+	background-image: url(/img/mostwatched.png);
+	background-position: center;
 	height: 100vh;
 }
 
@@ -234,3 +234,6 @@ nav > ul{
 	z-index: 9999;
 	filter: drop-shadow(0px 0px 5px #011c40);
 }
+
+	/* live */
+
