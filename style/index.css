@@ -240,6 +240,12 @@ nav > ul{
 .live-streamers{
 	display: flex;
 	width: 95vw;
+	overflow: hidden;
+	align-items: center;
+}
+
+.live-streamers > div{
+	margin: 10px 20px;
 }
 
 .live-streamers li {
@@ -255,4 +261,26 @@ nav > ul{
 	background: rgba(1, 28, 64,0.6);
 	transform: translateY(-80px);
 	padding: 21px;
+}
+
+.btn_npv{
+	background-color: transparent;
+	border: none;
+	color: var(--white);
+	position: absolute;
+	transform: translateY(-40px);
+	transition: 0.5s;
+}
+
+.btn_npv:hover{
+	transform: scale(200%) translateY(-20px);
+	filter: drop-shadow(0px 0px 10px #f5f5f5);
+}
+
+#btn_prev{
+	left: 50px;
+}
+
+#btn_next{
+	right: 45px;
 }
